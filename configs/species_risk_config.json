@@ -1,0 +1,176 @@
+{
+  "version": "1.0.0",
+  "risk_categories": {
+    "HIGH_HISTAMINE": {
+      "level": "CRITICAL",
+      "hazard_name": "Scombroid / Histamine Fish Poisoning",
+      "mechanism": "Bacterial histidine decarboxylase converts high free histidine in muscle tissue to heat-stable histamine under temperature abuse (>4°C). Cooking, freezing, or frying does NOT destroy histamine.",
+      "critical_temp_limit_celsius": 4.4,
+      "sni_indonesia_limit_mg_per_kg": 100.0,
+      "fda_action_level_ppm": 50.0
+    },
+    "CIGUATERA_WATCH": {
+      "level": "MODERATE_HIGH",
+      "hazard_name": "Ciguatera Fish Poisoning (CFP)",
+      "mechanism": "Bioaccumulation of lipid-soluble ciguatoxins (produced by Gambierdiscus dinoflagellates) up the coral reef trophic food chain to apex predators. Odorless, tasteless, and completely heat-stable.",
+      "critical_factor": "Reef carnivorous fish weight/size and origin reef health."
+    },
+    "LOW_INTRINSIC_RISK": {
+      "level": "LOW_INTRINSIC",
+      "hazard_name": "Bacterial Spoilage & Formalin Adulteration",
+      "mechanism": "Low free histidine and zero ciguatoxin risk. Primary risks are standard post-mortem bacterial decomposition (Pseudomonas, Shewanella) and illegal formalin (formaldehyde) dipping by unscrupulous vendors.",
+      "critical_factor": "Visual eye/gill freshness and formalin sensory check."
+    },
+    "UNKNOWN_RISK": {
+      "level": "UNSPECIFIED",
+      "hazard_name": "Unverified Species Risk",
+      "mechanism": "Species could not be identified with >= 0.70 confidence. Conservative screening applies.",
+      "critical_factor": "Requires manual user confirmation."
+    }
+  },
+  "species_catalog": {
+    "tongkol": {
+      "common_name_id": "Ikan Tongkol",
+      "common_name_en": "Bullet Tuna / Frigate Tuna",
+      "scientific_name": "Auxis rochei",
+      "family": "Scombridae",
+      "intrinsic_risk": "HIGH_HISTAMINE",
+      "histidine_content_g_per_100g": 1.45,
+      "max_room_temp_exposure_minutes": 90,
+      "refrigeration_reminder_hours": 2,
+      "cook_within_hours": 24,
+      "handling_advice": "Must be packed in crushed ice immediately upon catch. Never buy if sitting at ambient market temperature without ice.",
+      "symptom_warning": "Flushing, throbbing headache, hives, itchy rash, oral burning, vomiting, diarrhea within 10-60 mins of eating."
+    },
+    "kembung": {
+      "common_name_id": "Ikan Kembung",
+      "common_name_en": "Indian Mackerel",
+      "scientific_name": "Rastrelliger kanagurta",
+      "family": "Scombridae",
+      "intrinsic_risk": "HIGH_HISTAMINE",
+      "histidine_content_g_per_100g": 1.28,
+      "max_room_temp_exposure_minutes": 90,
+      "refrigeration_reminder_hours": 2,
+      "cook_within_hours": 24,
+      "handling_advice": "High fat and histidine content makes it spoil quickly. Ensure gills are bright red and flesh bounces back firmly.",
+      "symptom_warning": "Scombroid poisoning with rapid allergic-like histamine response."
+    },
+    "cakalang": {
+      "common_name_id": "Ikan Cakalang",
+      "common_name_en": "Skipjack Tuna",
+      "scientific_name": "Katsuwonus pelamis",
+      "family": "Scombridae",
+      "intrinsic_risk": "HIGH_HISTAMINE",
+      "histidine_content_g_per_100g": 1.62,
+      "max_room_temp_exposure_minutes": 60,
+      "refrigeration_reminder_hours": 2,
+      "cook_within_hours": 24,
+      "handling_advice": "High metabolic rate pelagic species. Rapid histamine build-up if ice melts at the stall.",
+      "symptom_warning": "Severe histamine reactions often mistaken for acute seafood allergy."
+    },
+    "tenggiri": {
+      "common_name_id": "Ikan Tenggiri",
+      "common_name_en": "Spanish Mackerel / Narrow-barred Mackerel",
+      "scientific_name": "Scomberomorus commerson",
+      "family": "Scombridae",
+      "intrinsic_risk": "HIGH_HISTAMINE",
+      "histidine_content_g_per_100g": 1.35,
+      "max_room_temp_exposure_minutes": 90,
+      "refrigeration_reminder_hours": 2,
+      "cook_within_hours": 24,
+      "handling_advice": "Premium scombroid fish. Frequently bought for pempek or otak-otak. High risk if thawed and refrozen.",
+      "symptom_warning": "Histamine toxicity with rapid onset facial flushing and palpitations."
+    },
+    "kerapu": {
+      "common_name_id": "Ikan Kerapu",
+      "common_name_en": "Reef Grouper",
+      "scientific_name": "Epinephelus coioides",
+      "family": "Serranidae",
+      "intrinsic_risk": "CIGUATERA_WATCH",
+      "histidine_content_g_per_100g": 0.28,
+      "max_room_temp_exposure_minutes": 180,
+      "refrigeration_reminder_hours": 3,
+      "cook_within_hours": 36,
+      "handling_advice": "Predatory reef fish. Larger specimens (>2.5 kg) carry higher ciguatoxin concentration. Check eye/gill freshness and avoid exceptionally large reef specimens.",
+      "symptom_warning": "Ciguatera: temperature reversal (hot feels cold, cold feels hot), numbness in lips/fingers, joint pain lasting weeks."
+    },
+    "kakap": {
+      "common_name_id": "Ikan Kakap Merah",
+      "common_name_en": "Red Snapper",
+      "scientific_name": "Lutjanus campechanus",
+      "family": "Lutjanidae",
+      "intrinsic_risk": "CIGUATERA_WATCH",
+      "histidine_content_g_per_100g": 0.32,
+      "max_room_temp_exposure_minutes": 180,
+      "refrigeration_reminder_hours": 3,
+      "cook_within_hours": 36,
+      "handling_advice": "Carnivorous reef/coastal fish. Gills must be bright crimson red and eyes clear and bulging.",
+      "symptom_warning": "Potential ciguatera in warm reef specimens. Mild gastrointestinal and neurological symptoms."
+    },
+    "bandeng": {
+      "common_name_id": "Ikan Bandeng",
+      "common_name_en": "Milkfish",
+      "scientific_name": "Chanos chanos",
+      "family": "Chanidae",
+      "intrinsic_risk": "LOW_INTRINSIC_RISK",
+      "histidine_content_g_per_100g": 0.18,
+      "max_room_temp_exposure_minutes": 240,
+      "refrigeration_reminder_hours": 4,
+      "cook_within_hours": 48,
+      "handling_advice": "Low intrinsic histamine. Main threat is chemical preservation (formalin) to prolong shelf life in warm markets. Check for natural fish scent and firm but elastic flesh.",
+      "symptom_warning": "Bacterial gastroenteritis (nausea, cramping) or chemical mucosal irritation if formalin-tainted."
+    },
+    "gurame": {
+      "common_name_id": "Ikan Gurame",
+      "common_name_en": "Giant Gourami",
+      "scientific_name": "Osphronemus goramy",
+      "family": "Osphronemidae",
+      "intrinsic_risk": "LOW_INTRINSIC_RISK",
+      "histidine_content_g_per_100g": 0.15,
+      "max_room_temp_exposure_minutes": 240,
+      "refrigeration_reminder_hours": 4,
+      "cook_within_hours": 48,
+      "handling_advice": "Freshwater fish commonly sold live or freshly slaughtered. Low chemical or biological toxin risk.",
+      "symptom_warning": "Standard bacterial food poisoning if gills are muddy brown and slimy."
+    },
+    "nila": {
+      "common_name_id": "Ikan Nila",
+      "common_name_en": "Nile Tilapia",
+      "scientific_name": "Oreochromis niloticus",
+      "family": "Cichlidae",
+      "intrinsic_risk": "LOW_INTRINSIC_RISK",
+      "histidine_content_g_per_100g": 0.16,
+      "max_room_temp_exposure_minutes": 240,
+      "refrigeration_reminder_hours": 4,
+      "cook_within_hours": 48,
+      "handling_advice": "Freshwater farmed staple. Spoilage shows quickly via eye sinking and gill mucus.",
+      "symptom_warning": "Bacterial foodborne infection if consumed deteriorated."
+    },
+    "lele": {
+      "common_name_id": "Ikan Lele",
+      "common_name_en": "African Catfish / Walking Catfish",
+      "scientific_name": "Clarias gariepinus",
+      "family": "Clariidae",
+      "intrinsic_risk": "LOW_INTRINSIC_RISK",
+      "histidine_content_g_per_100g": 0.14,
+      "max_room_temp_exposure_minutes": 240,
+      "refrigeration_reminder_hours": 4,
+      "cook_within_hours": 48,
+      "handling_advice": "Extremely hardy species, often sold alive. Inspect skin mucus and gill freshness if sold dead.",
+      "symptom_warning": "Bacterial gastrointestinal upset."
+    },
+    "unknown": {
+      "common_name_id": "Spesies Tidak Dikenal",
+      "common_name_en": "Unknown Species",
+      "scientific_name": "N/A",
+      "family": "N/A",
+      "intrinsic_risk": "UNKNOWN_RISK",
+      "histidine_content_g_per_100g": 0.50,
+      "max_room_temp_exposure_minutes": 90,
+      "refrigeration_reminder_hours": 2,
+      "cook_within_hours": 24,
+      "handling_advice": "Species could not be verified automatically. Use manual selection sheet to verify if fish belongs to Scombridae family.",
+      "symptom_warning": "Uncertain toxin profile."
+    }
+  }
+}

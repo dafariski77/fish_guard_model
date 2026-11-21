@@ -1,0 +1,102 @@
+{
+  "version": "1.0.0",
+  "vision_weights": {
+    "eye_weight": 0.45,
+    "gill_weight": 0.55,
+    "grade_thresholds": {
+      "SAFE": 75.0,
+      "CAUTION": 50.0,
+      "AVOID": 0.0
+    }
+  },
+  "verdict_thresholds": {
+    "green_min_freshness": 75.0,
+    "yellow_min_freshness": 50.0,
+    "red_max_freshness": 49.9
+  },
+  "species_confidence_threshold": 0.70,
+  "sensory_rules": [
+    {
+      "id": "RULE_FORMALIN_DUAL_FLAG",
+      "priority": 1,
+      "condition": {
+        "smell": "odorless",
+        "texture": "unnaturally_stiff"
+      },
+      "forced_verdict": "RED",
+      "reason": "Suspected formalin adulteration: unnaturally stiff texture combined with lack of natural fish scent.",
+      "recommendation": "Do not consume or buy. Report suspected illegal chemical adulteration."
+    },
+    {
+      "id": "RULE_SPOILED_AMMONIA_SMELL",
+      "priority": 2,
+      "condition": {
+        "smell": "sour_ammonia"
+      },
+      "forced_verdict": "RED",
+      "reason": "Strong sour or ammonia odor indicates advanced bacterial decomposition and trimethylamine breakdown.",
+      "recommendation": "Do not buy. Fish is spoiled and poses high risk of acute bacterial gastroenteritis."
+    },
+    {
+      "id": "RULE_SPOILED_MUSHY_FLESH",
+      "priority": 3,
+      "condition": {
+        "texture": "mushy"
+      },
+      "forced_verdict": "RED",
+      "reason": "Flesh does not bounce back: muscle proteolysis indicates severe bacterial decay.",
+      "recommendation": "Do not buy. Decomposed flesh can harbor severe foodborne pathogens."
+    },
+    {
+      "id": "RULE_HISTAMINE_OFF_ICE_MILD",
+      "priority": 4,
+      "condition": {
+        "species_intrinsic_risk": "HIGH_HISTAMINE",
+        "storage": "no_ice_room_temp",
+        "vision_score_min": 70.0
+      },
+      "forced_verdict": "YELLOW",
+      "reason_templates": [
+        "{species_display} is a high-histamine species.",
+        "Kept without ice: bacteria rapidly produce heat-stable histamine that cooking cannot destroy."
+      ],
+      "recommendation": "Cook immediately if purchased, or choose a fish packed in ice."
+    },
+    {
+      "id": "RULE_HISTAMINE_OFF_ICE_CRITICAL",
+      "priority": 5,
+      "condition": {
+        "species_intrinsic_risk": "HIGH_HISTAMINE",
+        "storage": "no_ice_room_temp",
+        "vision_score_max": 69.9
+      },
+      "forced_verdict": "RED",
+      "reason_templates": [
+        "{species_display} stored at room temperature with visible signs of deterioration.",
+        "High risk of dangerous histamine toxicity (scombroid poisoning). Cooking does not destroy histamine."
+      ],
+      "recommendation": "Do not buy. High probability of acute histamine poisoning requiring emergency medical care."
+    },
+    {
+      "id": "RULE_CIGUATERA_ADVISORY",
+      "priority": 6,
+      "condition": {
+        "species_intrinsic_risk": "CIGUATERA_WATCH"
+      },
+      "advisory_reason": "{species_display} is a reef predator prone to bioaccumulating ciguatoxin. Choose smaller specimens (<2 kg) and avoid eating head, viscera, or roe."
+    },
+    {
+      "id": "RULE_SENSORY_SKIPPED_ADVISORY",
+      "priority": 7,
+      "condition": {
+        "skipped": true
+      },
+      "advisory_reason": "Sensory check skipped: invisible chemical or temperature-abuse hazards could not be fully assessed."
+    }
+  ],
+  "default_recommendations": {
+    "GREEN": "Safe to buy. Keep chilled on ice, refrigerate within 2 hours, and cook within 24 hours.",
+    "YELLOW": "Exercise caution. Check gills closely and cook thoroughly today if purchased.",
+    "RED": "Do not purchase or consume. Fish displays clear indicators of spoilage, temperature abuse, or chemical adulteration."
+  }
+}

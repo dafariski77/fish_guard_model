@@ -1,0 +1,120 @@
+{
+  "version": "1.0.0",
+  "detector_classes": [
+    "fish_eye",
+    "fish_gill"
+  ],
+  "species_classes": [
+    "tongkol",
+    "kembung",
+    "cakalang",
+    "bandeng",
+    "kakap",
+    "gurame",
+    "nila",
+    "lele",
+    "kerapu",
+    "tenggiri",
+    "unknown"
+  ],
+  "species_metadata": {
+    "tongkol": {
+      "display_name": "Tongkol (Bullet Tuna)",
+      "scientific_name": "Auxis rochei",
+      "family": "Scombridae",
+      "habitat": "marine",
+      "intrinsic_risk": "HIGH_HISTAMINE",
+      "description": "High free histidine content. Highly vulnerable to temperature abuse and histamine accumulation."
+    },
+    "kembung": {
+      "display_name": "Kembung (Indian Mackerel)",
+      "scientific_name": "Rastrelliger kanagurta",
+      "family": "Scombridae",
+      "habitat": "marine",
+      "intrinsic_risk": "HIGH_HISTAMINE",
+      "description": "Widely consumed staple mackerel. Converts histidine to heat-stable histamine when stored off ice."
+    },
+    "cakalang": {
+      "display_name": "Cakalang (Skipjack Tuna)",
+      "scientific_name": "Katsuwonus pelamis",
+      "family": "Scombridae",
+      "habitat": "marine",
+      "intrinsic_risk": "HIGH_HISTAMINE",
+      "description": "Pelagic tuna with high myoglobin and histidine content. Requires strict cold chain maintenance."
+    },
+    "tenggiri": {
+      "display_name": "Tenggiri (Spanish Mackerel)",
+      "scientific_name": "Scomberomorus commerson",
+      "family": "Scombridae",
+      "habitat": "marine",
+      "intrinsic_risk": "HIGH_HISTAMINE",
+      "description": "Premium predatory mackerel. Scombroid family member with severe histamine poisoning potential."
+    },
+    "kerapu": {
+      "display_name": "Kerapu (Reef Grouper)",
+      "scientific_name": "Epinephelus coioides",
+      "family": "Serranidae",
+      "habitat": "coral_reef",
+      "intrinsic_risk": "CIGUATERA_WATCH",
+      "description": "Apex reef predator. Can accumulate odorless and heat-stable ciguatoxins from dinoflagellates in warm waters."
+    },
+    "kakap": {
+      "display_name": "Kakap Merah (Red Snapper)",
+      "scientific_name": "Lutjanus campechanus",
+      "family": "Lutjanidae",
+      "habitat": "marine_reef",
+      "intrinsic_risk": "CIGUATERA_WATCH",
+      "description": "Carnivorous reef fish with occasional bioaccumulation of ciguatera toxins in coastal waters."
+    },
+    "bandeng": {
+      "display_name": "Bandeng (Milkfish)",
+      "scientific_name": "Chanos chanos",
+      "family": "Chanidae",
+      "habitat": "brackish_water",
+      "intrinsic_risk": "LOW_INTRINSIC_RISK",
+      "description": "Major farmed species. Low intrinsic histamine levels; primary risks are bacterial spoilage and illegal formalin."
+    },
+    "gurame": {
+      "display_name": "Gurame (Giant Gourami)",
+      "scientific_name": "Osphronemus goramy",
+      "family": "Osphronemidae",
+      "habitat": "freshwater",
+      "intrinsic_risk": "LOW_INTRINSIC_RISK",
+      "description": "Freshwater aquaculture fish. Zero ciguatera and low histidine; vulnerable to bacterial decay."
+    },
+    "nila": {
+      "display_name": "Nila (Nile Tilapia)",
+      "scientific_name": "Oreochromis niloticus",
+      "family": "Cichlidae",
+      "habitat": "freshwater",
+      "intrinsic_risk": "LOW_INTRINSIC_RISK",
+      "description": "Hardy freshwater fish. Spoilage easily judged through gill discoloration."
+    },
+    "lele": {
+      "display_name": "Lele (African Catfish)",
+      "scientific_name": "Clarias gariepinus",
+      "family": "Clariidae",
+      "habitat": "freshwater",
+      "intrinsic_risk": "LOW_INTRINSIC_RISK",
+      "description": "Air-breathing freshwater catfish. Low chemical toxin risk; inspected for flesh softness and formalin."
+    },
+    "unknown": {
+      "display_name": "Unknown / Unclassified Species",
+      "scientific_name": "N/A",
+      "family": "N/A",
+      "habitat": "unknown",
+      "intrinsic_risk": "UNKNOWN_RISK",
+      "description": "Species confidence below 0.70 threshold. Triggers manual species picker fallback."
+    }
+  },
+  "freshness_classes": [
+    "FRESH",
+    "DETERIORATED",
+    "ROTTEN"
+  ],
+  "sensory_choices": {
+    "smell": ["fresh_sea", "sour_ammonia", "odorless"],
+    "texture": ["bounces_back", "mushy", "unnaturally_stiff"],
+    "storage": ["packed_in_ice", "no_ice_room_temp"]
+  }
+}
